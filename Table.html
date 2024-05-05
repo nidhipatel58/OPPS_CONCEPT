@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <table border="1" style="background-color: rgb(43, 226, 168); padding: 20px; text-align: center;" width="100%">
+        <thead>
+            <tr>
+                <th style="padding: 15px;">Name</th>
+                <th style="padding: 15px;">Email</th>
+                <th style="padding: 15px;">Phone</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <script>
+
+
+        // ===================task-2========
+
+
+        let data = [
+            {
+                name: "jay",
+                email: "jay@gmail.com",
+                phone: "12345",
+            },
+            {
+                name: "ajay",
+                email: "ajay@gmail.com",
+                phone: "12345",
+            },
+            {
+                name: "vijay",
+                email: "vijay@gmail.com",
+                phone: "12345",
+            },
+            {
+                name: "ashish",
+                email: "ashish@gmail.com",
+                phone: "12345",
+            },
+        ];
+
+
+        class Table {
+
+            constructor() {
+                let table_body = document.getElementById("table-body");
+                data.map((val) => {
+                    let tr = document.createElement("tr");
+                    tr.innerHTML = `<td>${val.name}</td>
+                        <td>${val.email}</td>
+                        <td>${val.phone}</td>`
+
+                    table_body.appendChild(tr);
+
+                });
+            }
+
+        }
+
+        let  htmltable = new Table();
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

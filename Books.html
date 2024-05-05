@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+
+        // =============task-5=========
+
+
+
+        class Library {
+
+            constructor(book) {
+                this.book = ["Power of subconsious mind","Discovery of India"];
+            }
+
+            addBook(book) {
+                this.book.push(book);
+                console.log(this.book);
+            }
+
+            removeclass(bookremove) {
+                this.book = this.book.filter(
+                    book => book !== bookremove
+                );
+                console.log(this.book);
+            }
+        }
+
+        let book1 = new Library();
+        book1.addBook("Shir MadBhagavat gita");
+        book1.removeclass("Discovery of India");
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

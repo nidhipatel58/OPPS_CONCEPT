@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // ===========task-1===========
+
+        class Students {
+
+            constructor(phy, che, bio, maths, computer) {
+
+                this.phy = phy;
+                this.che = che;
+                this.bio = bio;
+                this.maths = maths;
+                this.computer = computer;
+            }
+
+            percentage() {
+                let sum = this.phy + this.che + this.bio + this.maths + this.computer;
+                console.log("Result", sum);
+                let per = sum / 5;
+                console.log("percentage", per, "%");
+                return per;
+            }
+
+            totalgrade() {
+
+                let per = this.percentage();
+                let grade;
+
+                if (per >= 90) {
+                    console.log("Grade A");
+                }
+                else if (per >= 80) {
+                    console.log("Grade B");
+                }
+                else if (per >= 70) {
+                    console.log("Grade C");
+                }
+                else if (per >= 60) {
+                    console.log("Grade D");
+                }
+                else if (per >= 50) {
+                    console.log("Grade E");
+                }
+                else {
+                    console.log("Fail");
+                }
+
+                return grade;
+            }
+
+        }
+        let person = new Students(80, 60, 88, 70, 75);
+        let grade = person.totalgrade();
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
